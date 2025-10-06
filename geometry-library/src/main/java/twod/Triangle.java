@@ -1,4 +1,4 @@
-package org.twod;
+package twod;
 
 public class Triangle implements Shape {
     private double sideA;

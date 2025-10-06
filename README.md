@@ -1,5 +1,1 @@
-mvn clean compile
-
-mvn package
-
-mvn install
+mvn clean install

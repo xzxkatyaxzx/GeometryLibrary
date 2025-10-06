@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.geometry</groupId>
-    <artifactId>geometry</artifactId>
+    <artifactId>three-dimensional-shapes</artifactId>
     <version>1.1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -15,11 +15,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <modules>
-        <module>geometry-library</module>
-        <module>geometry-utils</module>
-        <module>three-dimensional-shapes</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.geometry</groupId>
+            <artifactId>geometry-library</artifactId>
+            <version>1.1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

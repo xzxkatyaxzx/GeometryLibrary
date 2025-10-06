@@ -1,4 +1,4 @@
-package org.twod;
+package twod;
 
 public class Circle implements Shape {
     private double radius;
