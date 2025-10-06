@@ -1,4 +1,4 @@
-package org.example;
+package org.twod;
 
 public class Triangle implements Shape {
     private double sideA;
@@ -7,7 +7,7 @@ public class Triangle implements Shape {
 
     public Triangle(double sideA, double sideB, double sideC) {
         if (!isValidTriangle(sideA, sideB, sideC)) {
-            throw new IllegalArgumentException("Треугольник с такими сторонами не существует");
+            throw new IllegalArgumentException("Triangle is not a valid triangle");
         }
         this.sideA = sideA;
         this.sideB = sideB;
@@ -16,7 +16,7 @@ public class Triangle implements Shape {
 
     @Override
     public String getName() {
-        return "Треугольник";
+        return "Triangle";
     }
 
     public double getSideA() {
@@ -25,7 +25,7 @@ public class Triangle implements Shape {
 
     public void setSideA(double sideA) {
         if (!isValidTriangle(sideA, sideB, sideC)) {
-            throw new IllegalArgumentException("Треугольник с такими сторонами не существует");
+            throw new IllegalArgumentException("Triangle is not a valid triangle");
         }
         this.sideA = sideA;
     }
@@ -36,7 +36,7 @@ public class Triangle implements Shape {
 
     public void setSideB(double sideB) {
         if (!isValidTriangle(sideA, sideB, sideC)) {
-            throw new IllegalArgumentException("Треугольник с такими сторонами не существует");
+            throw new IllegalArgumentException("Triangle is not a valid triangle");
         }
         this.sideB = sideB;
     }
@@ -47,7 +47,7 @@ public class Triangle implements Shape {
 
     public void setSideC(double sideC) {
         if (!isValidTriangle(sideA, sideB, sideC)) {
-            throw new IllegalArgumentException("Треугольник с такими сторонами не существует");
+            throw new IllegalArgumentException("Triangle is not a valid triangle");
         }
         this.sideC = sideC;
     }
@@ -59,7 +59,7 @@ public class Triangle implements Shape {
 
     @Override
     public String toString() {
-        return String.format("%s [стороны: %.2f, %.2f, %.2f, площадь=%.2f, периметр=%.2f]",
+        return String.format("%s [sides: %.2f, %.2f, %.2f, area=%.2f, perimeter=%.2f]",
                 getName(), sideA, sideB, sideC, calculateArea(), calculatePerimeter());
     }
 

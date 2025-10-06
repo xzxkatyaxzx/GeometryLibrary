@@ -1,4 +1,4 @@
-package org.example;
+package org.twod;
 
 public interface Shape {
     double calculateArea();

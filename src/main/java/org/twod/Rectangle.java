@@ -1,4 +1,4 @@
-package org.example;
+package org.twod;
 
 public class Rectangle implements Shape {
     private double width;
@@ -6,7 +6,7 @@ public class Rectangle implements Shape {
 
     public Rectangle(double width, double height) {
         if (width <= 0 || height <= 0) {
-            throw new IllegalArgumentException("Ширина и высота должны быть положительными числами");
+            throw new IllegalArgumentException("Width and height must be positive");
         }
         this.width = width;
         this.height = height;
@@ -14,7 +14,7 @@ public class Rectangle implements Shape {
 
     @Override
     public String getName() {
-        return "Прямоугольник";
+        return "Rectangle";
     }
 
     public double getWidth() {
@@ -23,7 +23,7 @@ public class Rectangle implements Shape {
 
     public void setWidth(double width) {
         if (width <= 0) {
-            throw new IllegalArgumentException("Ширина должна быть положительным числом");
+            throw new IllegalArgumentException("Width must be positive");
         }
         this.width = width;
     }
@@ -34,14 +34,14 @@ public class Rectangle implements Shape {
 
     public void setHeight(double height) {
         if (height <= 0) {
-            throw new IllegalArgumentException("Высота должна быть положительным числом");
+            throw new IllegalArgumentException("Height must be positive");
         }
         this.height = height;
     }
 
     @Override
     public String toString() {
-        return String.format("%s [ширина=%.2f, высота=%.2f, площадь=%.2f, периметр=%.2f]",
+        return String.format("%s [width=%.2f, height=%.2f, area=%.2f, perimeter=%.2f]",
                 getName(), width, height, calculateArea(), calculatePerimeter());
     }
 

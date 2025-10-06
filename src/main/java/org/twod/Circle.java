@@ -1,18 +1,18 @@
-package org.example;
+package org.twod;
 
 public class Circle implements Shape {
     private double radius;
 
     public Circle(double radius) {
         if (radius <= 0) {
-            throw new IllegalArgumentException("Радиус должен быть положительным числом");
+            throw new IllegalArgumentException("Radius must be greater than 0");
         }
         this.radius = radius;
     }
 
     @Override
     public String getName() {
-        return "Круг";
+        return "Circle";
     }
 
     public double getRadius() {
@@ -21,14 +21,14 @@ public class Circle implements Shape {
 
     public void setRadius(double radius) {
         if (radius <= 0) {
-            throw new IllegalArgumentException("Радиус должен быть положительным числом");
+            throw new IllegalArgumentException("Radius must be greater than 0");
         }
         this.radius = radius;
     }
 
     @Override
     public String toString() {
-        return String.format("%s [радиус=%.2f, площадь=%.2f, периметр=%.2f]", getName(), radius, calculateArea(), calculatePerimeter());
+        return String.format("%s [radius=%.2f, area=%.2f, perimeter=%.2f]", getName(), radius, calculateArea(), calculatePerimeter());
     }
 
     @Override
